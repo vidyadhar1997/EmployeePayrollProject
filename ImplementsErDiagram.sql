@@ -54,7 +54,7 @@ select * from employee;
 
 create table EmployeeDepartment
 (
-employee_Department_id int not null,
+employee_Department_id int not null primary key,
 employee_id int not null,
 department_id int not null,
 foreign key(employee_id) references employee(employee_id),
@@ -62,9 +62,7 @@ foreign key(department_id)references Department(department_id)
 )
 insert into EmployeeDepartment values
 (401,1,101),
-(402,2,102),
-(401,1,102),
-(402,2,101);
+(402,2,102);
 select * from EmployeeDepartment;
 
 /*Redo the UC-7 */
